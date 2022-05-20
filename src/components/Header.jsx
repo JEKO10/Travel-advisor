@@ -7,8 +7,8 @@ function Header() {
       <h1>Travel Advisor</h1>
       <h2>Travel your way</h2>
       <div className="search">
-        <FiSearch />
         <input type="text" placeholder="Search places..." />
+        <FiSearch />
       </div>
     </header>
   );
