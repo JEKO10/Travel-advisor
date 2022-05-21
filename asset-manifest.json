@@ -1,15 +1,15 @@
 {
-  "main.css": "/Travel-advisor/static/css/main.686c970a.chunk.css",
-  "main.js": "/Travel-advisor/static/js/main.49dfc9cd.chunk.js",
-  "main.js.map": "/Travel-advisor/static/js/main.49dfc9cd.chunk.js.map",
-  "static/js/1.0d630a3e.chunk.js": "/Travel-advisor/static/js/1.0d630a3e.chunk.js",
-  "static/js/1.0d630a3e.chunk.js.map": "/Travel-advisor/static/js/1.0d630a3e.chunk.js.map",
-  "static/js/2.c4cb1665.chunk.js": "/Travel-advisor/static/js/2.c4cb1665.chunk.js",
-  "static/js/2.c4cb1665.chunk.js.map": "/Travel-advisor/static/js/2.c4cb1665.chunk.js.map",
-  "runtime~main.js": "/Travel-advisor/static/js/runtime~main.45dda915.js",
-  "runtime~main.js.map": "/Travel-advisor/static/js/runtime~main.45dda915.js.map",
-  "static/css/main.686c970a.chunk.css.map": "/Travel-advisor/static/css/main.686c970a.chunk.css.map",
+  "main.css": "/Travel-advisor/static/css/main.da2993e6.chunk.css",
+  "main.js": "/Travel-advisor/static/js/main.0c0a9ddb.chunk.js",
+  "main.js.map": "/Travel-advisor/static/js/main.0c0a9ddb.chunk.js.map",
+  "runtime~main.js": "/Travel-advisor/static/js/runtime~main.afe5db1a.js",
+  "runtime~main.js.map": "/Travel-advisor/static/js/runtime~main.afe5db1a.js.map",
+  "static/js/2.0243b0f7.chunk.js": "/Travel-advisor/static/js/2.0243b0f7.chunk.js",
+  "static/js/2.0243b0f7.chunk.js.map": "/Travel-advisor/static/js/2.0243b0f7.chunk.js.map",
+  "static/js/3.68b36b5f.chunk.js": "/Travel-advisor/static/js/3.68b36b5f.chunk.js",
+  "static/js/3.68b36b5f.chunk.js.map": "/Travel-advisor/static/js/3.68b36b5f.chunk.js.map",
   "index.html": "/Travel-advisor/index.html",
-  "precache-manifest.d494e8ce0100cb21a8b1cd1f1525ffe6.js": "/Travel-advisor/precache-manifest.d494e8ce0100cb21a8b1cd1f1525ffe6.js",
-  "service-worker.js": "/Travel-advisor/service-worker.js"
+  "precache-manifest.2435b2a836e3d65bf87f26743a84c511.js": "/Travel-advisor/precache-manifest.2435b2a836e3d65bf87f26743a84c511.js",
+  "service-worker.js": "/Travel-advisor/service-worker.js",
+  "static/css/main.da2993e6.chunk.css.map": "/Travel-advisor/static/css/main.da2993e6.chunk.css.map"
 }
