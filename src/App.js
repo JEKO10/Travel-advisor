@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./components/Header";
-import Map from "./components/Map";
+import HomeMap from "./components/HomeMap";
 
 function App() {
   return (
     <>
       <Header />
-      <Map />
+      <HomeMap />
     </>
   );
 }
