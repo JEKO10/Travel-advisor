@@ -65,10 +65,61 @@ header .search input::placeholder {
   height: 90vh;
 }
 
+.placeInfo {
+  font-family: "Lato", sans-serif;
+  padding: 20px 15px;
+}
+
+.placeInfo h1 {
+  padding-bottom: 20px;
+  font-size: 1.9rem;
+}
+
+.placeInfo .filters {
+  padding: 5px 0 30px;
+}
+
+.placeInfo .filters > label {
+  opacity: 0.8;
+}
+
+.placeInfo .filters div {
+  padding-top: 5px;
+}
+
+.placeInfo .filters div select {
+  margin-right: 2rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 1rem;
+  padding-right: 20px;
+}
+
+.placeInfo .places h1 {
+  padding: 20px 0;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main > section {
+  width: 50%;
 }
 /*# sourceMappingURL=main.css.map */

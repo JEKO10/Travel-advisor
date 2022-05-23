@@ -1,9 +1,18 @@
 @import "config";
 @import "header";
 @import "map";
+@import "placeInfo";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+main {
+  @include flex(center, flex-start);
+
+  > section {
+    width: 50%;
+  }
 }
