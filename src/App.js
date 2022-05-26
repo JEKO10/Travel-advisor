@@ -6,21 +6,25 @@ import { getPlaces } from "./components/APIs";
 
 function App() {
   const [places, setPlaces] = useState([]);
+  const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
+  const [bounds, setBounds] = useState(null);
 
   useEffect(() => {
     getPlaces().then((data) => {
       setPlaces(data.data);
     });
-  }, []);
-
-  console.log(places);
+  }, [coordinates, bounds]);
 
   return (
     <>
       <Header />
       <main>
         <PlaceInfo />
-        <HomeMap />
+        <HomeMap
+          coordinates={coordinates}
+          setCoordinates={setCoordinates}
+          setBounds={setBounds}
+        />
       </main>
     </>
   );
