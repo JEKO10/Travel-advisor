@@ -13,8 +13,6 @@ function HomeMap({ coordinates, setBounds, setCoordinates }) {
     return null;
   };
 
-  console.log(coordinates);
-
   return (
     <section className="leaflet-container">
       <MapContainer

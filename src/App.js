@@ -17,11 +17,9 @@ function App() {
     );
   }, []);
 
-  console.log(coordinates);
-
   useEffect(() => {
-    getPlaces().then((data) => {
-      setPlaces(data.data);
+    getPlaces(bounds.sw, bounds.ne).then((data) => {
+      setPlaces(data);
     });
   }, [coordinates, bounds]);
 

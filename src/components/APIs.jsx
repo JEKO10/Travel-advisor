@@ -1,44 +1,23 @@
-// import axios from "axios";
+import axios from "axios";
 
 const baseUrl =
-  "https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=eiffel%20tower&lang=en_US&units=km";
+  "https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary";
 
-// const options = {
-//   params: {
-//     bl_latitude: "11.847676",
-//     tr_latitude: "12.838442",
-//     bl_longitude: "109.095887",
-//     tr_longitude: "109.149359",
-//   },
-//   headers: {
-//     "x-rapidapi-key": "689bdba840msh627580b0402dd16p1bbcc9jsn0188595ae046",
-//     "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
-//   },
-// };
-
-// export const getPlaces = async () => {
-//   try {
-//     const {
-//       data: { data },
-//     } = await axios.get(baseUrl, options);
-
-//     return data;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
-    "X-RapidAPI-Key": "689bdba840msh627580b0402dd16p1bbcc9jsn0188595ae046",
-  },
-};
-
-export const getPlaces = async () => {
-  const response = await fetch(baseUrl, options);
-  const data = await response.json();
+export const getPlaces = async (sw, ne) => {
+  const {
+    data: { data },
+  } = await axios.get(baseUrl, {
+    params: {
+      bl_latitude: sw.lat,
+      tr_latitude: ne.lat,
+      bl_longitude: sw.lng,
+      tr_longitude: ne.lng,
+    },
+    headers: {
+      "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
+      "X-RapidAPI-Key": "5fb1978683msh82118b802984d83p10f722jsn9b9b5a2d80cc",
+    },
+  });
 
   return data;
 };
