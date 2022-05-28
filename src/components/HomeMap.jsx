@@ -17,7 +17,7 @@ function HomeMap({ coordinates, setBounds, setCoordinates }) {
     <section className="leaflet-container">
       <MapContainer
         key={JSON.stringify(coordinates)}
-        center={coordinates}
+        center={[0, 0]}
         zoom={14}
         scrollWheelZoom={true}
       >
@@ -25,7 +25,6 @@ function HomeMap({ coordinates, setBounds, setCoordinates }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={coordinates}></Marker>
         <SetViewOnClick />
       </MapContainer>
     </section>
