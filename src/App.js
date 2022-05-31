@@ -6,17 +6,8 @@ import { getPlaces } from "./components/APIs";
 
 function App() {
   const [places, setPlaces] = useState([]);
-  const [coordinates, setCoordinates] = useState();
   const [bounds, setBounds] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(
-      ({ coords: { latitude, longitude } }) => {
-        setCoordinates({ lat: latitude, lng: longitude });
-      }
-    );
-  }, []);
 
   useEffect(() => {
     if (bounds) {
@@ -26,18 +17,14 @@ function App() {
         setIsLoading(false);
       });
     }
-  }, [coordinates, bounds]);
+  }, [bounds]);
 
   return (
     <>
       <Header />
       <main>
-        <PlaceInfo isLoading={isLoading} />
-        <HomeMap
-          coordinates={coordinates}
-          setCoordinates={setCoordinates}
-          setBounds={setBounds}
-        />
+        <PlaceInfo isLoading={isLoading} places={places} />
+        <HomeMap setBounds={setBounds} />
       </main>
     </>
   );

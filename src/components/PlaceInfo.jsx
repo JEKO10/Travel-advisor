@@ -1,16 +1,9 @@
 import React, { useState } from "react";
+import SinglePlace from "./SinglePlace";
 
-function PlaceInfo({ isLoading }) {
+function PlaceInfo({ isLoading, places }) {
   const [type, setType] = useState("restaurants");
   const [rating, setRating] = useState("");
-
-  const places = [
-    { name: "Caffe" },
-    { name: "Bar" },
-    { name: "Restaurant" },
-    { name: "Hotel" },
-    { name: "Pub" },
-  ];
 
   return (
     <section className="placeInfo">
@@ -52,7 +45,7 @@ function PlaceInfo({ isLoading }) {
       ) : (
         <div className="places">
           {places.map((place) => {
-            return <h1 key={place.name}>{place.name}</h1>;
+            return <SinglePlace key={place.name} place={place} />;
           })}
         </div>
       )}
