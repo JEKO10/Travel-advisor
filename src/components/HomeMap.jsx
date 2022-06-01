@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, useMap, useMapEvent } from "react-leaflet";
+import { MapContainer, TileLayer, useMapEvent } from "react-leaflet";
 
 function HomeMap({ setBounds }) {
   const [coordinates, setCoordinates] = useState();

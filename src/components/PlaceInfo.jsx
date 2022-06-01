@@ -44,8 +44,8 @@ function PlaceInfo({ isLoading, places }) {
         ""
       ) : (
         <div className="places">
-          {places.map((place) => {
-            return <SinglePlace key={place.name} place={place} />;
+          {places.map((place, i) => {
+            return <SinglePlace key={i} place={place} />;
           })}
         </div>
       )}
