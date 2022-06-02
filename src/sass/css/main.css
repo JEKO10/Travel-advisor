@@ -96,8 +96,98 @@ header .search input::placeholder {
   padding-right: 20px;
 }
 
+.placeInfo .places {
+  height: 65vh;
+  overflow: auto;
+  padding: 0 15px;
+}
+
 .placeInfo .places h1 {
   padding: 20px 0;
+}
+
+.singlePlace {
+  margin: 1rem auto 2rem;
+  -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.singlePlace > img {
+  width: 100%;
+}
+
+.singlePlace h2 {
+  padding: 10px 10px;
+}
+
+.singlePlace > div {
+  padding: 5px 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.singlePlace > div.awards h4 {
+  opacity: 0.7;
+}
+
+.singlePlace > div.address svg {
+  width: 15px;
+  height: 15px;
+}
+
+.singlePlace > div.address h5 {
+  padding-left: 50px;
+}
+
+.singlePlace > div.phone svg {
+  width: 15px;
+  height: 15px;
+}
+
+.singlePlace .cuisine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.singlePlace .cuisine h5 {
+  margin: 5px;
+  background-color: #e1e0e2;
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.singlePlace button {
+  border: none;
+  background: none;
+  opacity: 0.7;
+  font-size: 0.9rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.singlePlace button:hover {
+  opacity: 1;
 }
 
 * {
@@ -105,6 +195,10 @@ header .search input::placeholder {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
 }
 
 main {

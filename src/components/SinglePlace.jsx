@@ -1,4 +1,5 @@
 import React from "react";
+import { ImPhone, ImLocation } from "react-icons/im";
 
 function SinglePlace({ place }) {
   console.log(place);
@@ -6,12 +7,12 @@ function SinglePlace({ place }) {
   const defaultPlace = {
     awards: place.awards
       ? place.awards
-      : [{ images: { small: "default" }, display_name: "default" }],
-    cuisine: place.cuisine ? place.cuisine : [{ name: "default" }],
+      : [{ images: { small: "" }, display_name: "" }],
+    cuisine: place.cuisine ? place.cuisine : [{ name: "" }],
   };
 
   return (
-    <section>
+    <section className="singlePlace">
       <img
         src={
           place.photo
@@ -22,32 +23,42 @@ function SinglePlace({ place }) {
         alt={place.name}
       />
       <h2>{place.name}</h2>
-      <h2>{place.rating}</h2>
-      <h1>{place.price_level}</h1>
-      <h2>{place.ranking}</h2>
+      {/* <h2>{place.rating}</h2> */}
+      <div className="price">
+        <h3>Price</h3>
+        <h4>{place.price_level}</h4>
+      </div>
+      <div className="ranking">
+        <h4>Ranking</h4>
+        <h4>{place.ranking}</h4>
+      </div>
       {defaultPlace.awards.map((award) => (
-        <div key={award.display_name}>
+        <div key={award.display_name} className="awards">
           <img src={award.images.small} alt="award" />
-          <h3>{award.display_name}</h3>
+          <h4>{award.display_name}</h4>
         </div>
       ))}
-      {defaultPlace.cuisine.map(({ name }) => (
-        <h3 key={name}>{name}</h3>
-      ))}
-      {place.address && <h3>{place.address}</h3>}
-      {place.phone && <h1>{place.phone}</h1>}
-      <button
-        size="small"
-        color="primary"
-        onClick={() => window.open(place.web_url, "_blank")}
-      >
+      <div className="cuisine">
+        {defaultPlace.cuisine.map(({ name }) => (
+          <h5 key={name}>{name}</h5>
+        ))}
+      </div>
+      {place.address && (
+        <div className="address">
+          <ImLocation />
+          <h5>{place.address}</h5>
+        </div>
+      )}
+      {place.phone && (
+        <div className="phone">
+          <ImPhone />
+          <h4>{place.phone}</h4>
+        </div>
+      )}
+      <button onClick={() => window.open(place.web_url, "_blank")}>
         Trip Advisor
       </button>
-      <button
-        size="small"
-        color="primary"
-        onClick={() => window.open(place.website, "_blank")}
-      >
+      <button onClick={() => window.open(place.website, "_blank")}>
         Website
       </button>
     </section>
