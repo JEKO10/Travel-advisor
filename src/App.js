@@ -24,7 +24,7 @@ function App() {
       <Header />
       <main>
         <PlaceInfo isLoading={isLoading} places={places} />
-        <HomeMap setBounds={setBounds} />
+        <HomeMap setBounds={setBounds} places={places} />
       </main>
     </>
   );

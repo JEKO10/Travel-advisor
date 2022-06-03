@@ -65,6 +65,10 @@ header .search input::placeholder {
   height: 90vh;
 }
 
+.popup img {
+  width: 200px;
+}
+
 .placeInfo {
   font-family: "Lato", sans-serif;
   padding: 20px 15px;
