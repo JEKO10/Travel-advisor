@@ -43,7 +43,7 @@ function HomeMap({ setBounds, places }) {
               }
             >
               <div>
-                {place.name}
+                <h3>{place.name}</h3>
                 <img
                   src={
                     place.photo

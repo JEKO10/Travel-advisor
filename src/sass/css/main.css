@@ -65,8 +65,28 @@ header .search input::placeholder {
   height: 90vh;
 }
 
-.popup img {
+.leaflet-popup-content > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Lato", sans-serif;
+  height: 150px;
   width: 200px;
+}
+
+.leaflet-popup-content > div img {
+  height: 80%;
+  width: 100%;
 }
 
 .placeInfo {
