@@ -1,7 +1,7 @@
 {
-  "main.css": "/Travel-advisor/static/css/main.92a8e452.chunk.css",
-  "main.js": "/Travel-advisor/static/js/main.070189b5.chunk.js",
-  "main.js.map": "/Travel-advisor/static/js/main.070189b5.chunk.js.map",
+  "main.css": "/Travel-advisor/static/css/main.f443b3fb.chunk.css",
+  "main.js": "/Travel-advisor/static/js/main.b034475e.chunk.js",
+  "main.js.map": "/Travel-advisor/static/js/main.b034475e.chunk.js.map",
   "runtime~main.js": "/Travel-advisor/static/js/runtime~main.0c7126dd.js",
   "runtime~main.js.map": "/Travel-advisor/static/js/runtime~main.0c7126dd.js.map",
   "static/js/2.5bf9132f.chunk.js": "/Travel-advisor/static/js/2.5bf9132f.chunk.js",
@@ -9,7 +9,7 @@
   "static/js/3.f03f87d3.chunk.js": "/Travel-advisor/static/js/3.f03f87d3.chunk.js",
   "static/js/3.f03f87d3.chunk.js.map": "/Travel-advisor/static/js/3.f03f87d3.chunk.js.map",
   "index.html": "/Travel-advisor/index.html",
-  "precache-manifest.cb8305a8c3265dafe0cd0f8e20658f3b.js": "/Travel-advisor/precache-manifest.cb8305a8c3265dafe0cd0f8e20658f3b.js",
+  "precache-manifest.58918ee978b0d9bfee85ba378c3fd2be.js": "/Travel-advisor/precache-manifest.58918ee978b0d9bfee85ba378c3fd2be.js",
   "service-worker.js": "/Travel-advisor/service-worker.js",
-  "static/css/main.92a8e452.chunk.css.map": "/Travel-advisor/static/css/main.92a8e452.chunk.css.map"
+  "static/css/main.f443b3fb.chunk.css.map": "/Travel-advisor/static/css/main.f443b3fb.chunk.css.map"
 }
