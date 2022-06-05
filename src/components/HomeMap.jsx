@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, useMapEvent, Popup } from "react-leaflet";
+import React, { useEffect } from "react";
+import { MapContainer, Marker, TileLayer, useMapEvent } from "react-leaflet";
+import * as L from "leaflet";
 
-function HomeMap({ setBounds, places }) {
-  const [coordinates, setCoordinates] = useState();
-
+function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
@@ -11,6 +10,22 @@ function HomeMap({ setBounds, places }) {
       }
     );
   }, []);
+
+  const markerIcon = (name, photo) =>
+    L.divIcon({
+      className: "custom icon",
+      html:
+        "<div>" +
+        `<h3>${name}</h3>` +
+        `<img
+            src=${photo}
+            title=${name}
+            alt=${name}
+          />` +
+        "</div>",
+    });
+
+  console.log(markerIcon);
 
   const SetViewOnClick = () => {
     const map = useMapEvent("move", () => {
@@ -32,29 +47,47 @@ function HomeMap({ setBounds, places }) {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           {places.map((place, i) => (
-            <Popup
-              className="popup"
+            <Marker
               key={i}
-              autoClose={false}
               position={
                 place.latitude && place.longitude
                   ? [place.latitude, place.longitude]
                   : coordinates
               }
-            >
-              <div>
-                <h3>{place.name}</h3>
-                <img
-                  src={
-                    place.photo
-                      ? place.photo.images.large.url
-                      : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
-                  }
-                  title={place.name}
-                  alt={place.name}
-                />
-              </div>
-            </Popup>
+              icon={markerIcon(
+                place.name,
+                place.photo
+                  ? place.photo.images.large.url
+                  : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
+              )}
+            ></Marker>
+            // <Popup
+            //   className="popup"
+            //   key={i}
+            //   autoClose={false}
+            //   position={
+            //     place.latitude && place.longitude
+            //       ? [place.latitude, place.longitude]
+            //       : coordinates
+            //   }
+            // >
+            //   {places ? (
+            //     <div>
+            //       <h3>{place.name}</h3>
+            //       <img
+            //         src={
+            //           place.photo
+            //             ? place.photo.images.large.url
+            //             : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
+            //         }
+            //         title={place.name}
+            //         alt={place.name}
+            //       />
+            //     </div>
+            //   ) : (
+            //     ""
+            //   )}
+            // </Popup>
           ))}
           <SetViewOnClick />
         </MapContainer>

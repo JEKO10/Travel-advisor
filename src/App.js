@@ -5,6 +5,7 @@ import PlaceInfo from "./components/PlaceInfo";
 import { getPlaces } from "./components/APIs";
 
 function App() {
+  const [coordinates, setCoordinates] = useState();
   const [places, setPlaces] = useState([]);
   const [bounds, setBounds] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -17,14 +18,19 @@ function App() {
         setIsLoading(false);
       });
     }
-  }, [bounds]);
+  }, [coordinates, bounds]);
 
   return (
     <>
       <Header />
       <main>
         <PlaceInfo isLoading={isLoading} places={places} />
-        <HomeMap setBounds={setBounds} places={places} />
+        <HomeMap
+          setBounds={setBounds}
+          places={places}
+          coordinates={coordinates}
+          setCoordinates={setCoordinates}
+        />
       </main>
     </>
   );
