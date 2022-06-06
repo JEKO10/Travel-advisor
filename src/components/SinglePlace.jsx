@@ -1,5 +1,6 @@
 import React from "react";
 import { ImPhone, ImLocation } from "react-icons/im";
+import StarRatings from "react-star-ratings";
 
 function SinglePlace({ place }) {
   console.log(place);
@@ -23,7 +24,17 @@ function SinglePlace({ place }) {
         alt={place.name}
       />
       <h2>{place.name}</h2>
-      {/* <h2>{place.rating}</h2> */}
+      {place.rating ? (
+        <StarRatings
+          rating={Number(place.rating)}
+          starRatedColor="orange"
+          numberOfStars={5}
+          starDimension="30px"
+          starSpacing="1px"
+        />
+      ) : (
+        "No rating"
+      )}
       <div className="price">
         <h3>Price</h3>
         <h4>{place.price_level}</h4>

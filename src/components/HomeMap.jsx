@@ -13,7 +13,7 @@ function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
 
   const markerIcon = (name, photo) =>
     L.divIcon({
-      className: "custom icon",
+      className: "markerIcon",
       html:
         "<div>" +
         `<h3>${name}</h3>` +
@@ -24,8 +24,6 @@ function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
           />` +
         "</div>",
     });
-
-  console.log(markerIcon);
 
   const SetViewOnClick = () => {
     const map = useMapEvent("move", () => {
@@ -61,33 +59,6 @@ function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
                   : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
               )}
             ></Marker>
-            // <Popup
-            //   className="popup"
-            //   key={i}
-            //   autoClose={false}
-            //   position={
-            //     place.latitude && place.longitude
-            //       ? [place.latitude, place.longitude]
-            //       : coordinates
-            //   }
-            // >
-            //   {places ? (
-            //     <div>
-            //       <h3>{place.name}</h3>
-            //       <img
-            //         src={
-            //           place.photo
-            //             ? place.photo.images.large.url
-            //             : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
-            //         }
-            //         title={place.name}
-            //         alt={place.name}
-            //       />
-            //     </div>
-            //   ) : (
-            //     ""
-            //   )}
-            // </Popup>
           ))}
           <SetViewOnClick />
         </MapContainer>

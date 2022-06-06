@@ -3,12 +3,14 @@
   height: 90vh;
 }
 
-.leaflet-popup-content {
+.markerIcon {
   > div {
+    background-color: #fff;
+    padding: 20px;
     @include flex(space-between, flex-start);
     flex-direction: column;
     font-family: $primaryFont;
-    height: 150px;
+    height: fit-content;
     width: 200px;
 
     img {

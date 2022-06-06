@@ -65,7 +65,9 @@ header .search input::placeholder {
   height: 90vh;
 }
 
-.leaflet-popup-content > div {
+.markerIcon > div {
+  background-color: #fff;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,11 +82,13 @@ header .search input::placeholder {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Lato", sans-serif;
-  height: 150px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 200px;
 }
 
-.leaflet-popup-content > div img {
+.markerIcon > div img {
   height: 80%;
   width: 100%;
 }
