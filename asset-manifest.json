@@ -1,15 +1,15 @@
 {
-  "main.css": "/Travel-advisor/static/css/main.f443b3fb.chunk.css",
-  "main.js": "/Travel-advisor/static/js/main.5f226e8f.chunk.js",
-  "main.js.map": "/Travel-advisor/static/js/main.5f226e8f.chunk.js.map",
-  "runtime~main.js": "/Travel-advisor/static/js/runtime~main.28319248.js",
-  "runtime~main.js.map": "/Travel-advisor/static/js/runtime~main.28319248.js.map",
-  "static/js/2.da3e82cc.chunk.js": "/Travel-advisor/static/js/2.da3e82cc.chunk.js",
-  "static/js/2.da3e82cc.chunk.js.map": "/Travel-advisor/static/js/2.da3e82cc.chunk.js.map",
-  "static/js/3.120d7e7f.chunk.js": "/Travel-advisor/static/js/3.120d7e7f.chunk.js",
-  "static/js/3.120d7e7f.chunk.js.map": "/Travel-advisor/static/js/3.120d7e7f.chunk.js.map",
+  "main.css": "/Travel-advisor/static/css/main.efc8ab50.chunk.css",
+  "main.js": "/Travel-advisor/static/js/main.57ef8f94.chunk.js",
+  "main.js.map": "/Travel-advisor/static/js/main.57ef8f94.chunk.js.map",
+  "runtime~main.js": "/Travel-advisor/static/js/runtime~main.3f9a60c7.js",
+  "runtime~main.js.map": "/Travel-advisor/static/js/runtime~main.3f9a60c7.js.map",
+  "static/js/2.fee372f2.chunk.js": "/Travel-advisor/static/js/2.fee372f2.chunk.js",
+  "static/js/2.fee372f2.chunk.js.map": "/Travel-advisor/static/js/2.fee372f2.chunk.js.map",
+  "static/js/3.68ba455b.chunk.js": "/Travel-advisor/static/js/3.68ba455b.chunk.js",
+  "static/js/3.68ba455b.chunk.js.map": "/Travel-advisor/static/js/3.68ba455b.chunk.js.map",
   "index.html": "/Travel-advisor/index.html",
-  "precache-manifest.9374ca70e896d749d1fa848f13f2e9af.js": "/Travel-advisor/precache-manifest.9374ca70e896d749d1fa848f13f2e9af.js",
+  "precache-manifest.4f271afc28571a7eac70dc90566ce4a5.js": "/Travel-advisor/precache-manifest.4f271afc28571a7eac70dc90566ce4a5.js",
   "service-worker.js": "/Travel-advisor/service-worker.js",
-  "static/css/main.f443b3fb.chunk.css.map": "/Travel-advisor/static/css/main.f443b3fb.chunk.css.map"
+  "static/css/main.efc8ab50.chunk.css.map": "/Travel-advisor/static/css/main.efc8ab50.chunk.css.map"
 }
