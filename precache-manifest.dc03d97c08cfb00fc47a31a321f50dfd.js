@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0ad2b61b043d116d4dc1",
+    "revision": "11e6a9ea6757ac4cedda",
     "url": "/Travel-advisor/static/css/main.efc8ab50.chunk.css"
   },
   {
-    "revision": "0ad2b61b043d116d4dc1",
-    "url": "/Travel-advisor/static/js/main.57ef8f94.chunk.js"
+    "revision": "11e6a9ea6757ac4cedda",
+    "url": "/Travel-advisor/static/js/main.c1be35c4.chunk.js"
   },
   {
     "revision": "a883ea5026715ffc9047",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/Travel-advisor/static/js/3.68ba455b.chunk.js"
   },
   {
-    "revision": "b9ff35858f03d854d02bccc889d4fc78",
+    "revision": "d31cf5b20ac130ea7a03f15674bc14dc",
     "url": "/Travel-advisor/index.html"
   }
 ];
