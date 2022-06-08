@@ -3,8 +3,6 @@ import { ImPhone, ImLocation } from "react-icons/im";
 import StarRatings from "react-star-ratings";
 
 function SinglePlace({ place }) {
-  console.log(place);
-
   const defaultPlace = {
     awards: place.awards
       ? place.awards

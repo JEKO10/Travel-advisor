@@ -11,7 +11,7 @@ function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
     );
   }, []);
 
-  const markerIcon = (name, photo) =>
+  const markerIcon = (name, photo, rating) =>
     L.divIcon({
       className: "markerIcon",
       html:
@@ -56,7 +56,8 @@ function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
                 place.name,
                 place.photo
                   ? place.photo.images.large.url
-                  : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg"
+                  : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
+                place.rating ? place.rating : ""
               )}
             ></Marker>
           ))}

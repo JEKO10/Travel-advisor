@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import SinglePlace from "./SinglePlace";
 
-function PlaceInfo({ isLoading, places }) {
-  const [type, setType] = useState("restaurants");
-  const [rating, setRating] = useState("");
+function PlaceInfo({ isLoading, places, type, setType, rating, setRating }) {
+  console.log(places);
 
   return (
     <section className="placeInfo">
@@ -16,9 +15,9 @@ function PlaceInfo({ isLoading, places }) {
           <div>
             <select
               name="type"
+              value={type}
               onChange={(e) => {
                 setType(e.target.value);
-                console.log(type);
               }}
             >
               <option value="restaurants">Restaurants</option>
@@ -27,15 +26,14 @@ function PlaceInfo({ isLoading, places }) {
             </select>
             <select
               name="rating"
+              value={rating}
               onChange={(e) => {
-                setRating(e.target.value);
-                console.log(rating);
+                setRating(Number(e.target.value));
               }}
             >
               <option value={0}>All</option>
               <option value={3}>Above 3.0</option>
               <option value={4}>Above 4.0</option>
-              <option value={4.5}>Above 4.5</option>
             </select>
           </div>
         </div>

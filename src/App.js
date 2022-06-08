@@ -8,26 +8,43 @@ function App() {
   const [coordinates, setCoordinates] = useState();
   const [places, setPlaces] = useState([]);
   const [bounds, setBounds] = useState(null);
+  const [type, setType] = useState("restaurants");
+  const [rating, setRating] = useState("");
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (bounds) {
       setIsLoading(true);
-      getPlaces(bounds.sw, bounds.ne).then((data) => {
+      getPlaces(type, bounds.sw, bounds.ne).then((data) => {
         setPlaces(data);
+        setFilteredPlaces([]);
         setIsLoading(false);
       });
     }
-  }, [coordinates, bounds]);
+  }, [coordinates, bounds, type]);
+
+  useEffect(() => {
+    const filtered = places.filter((place) => Number(place.rating) > rating);
+
+    setFilteredPlaces(filtered);
+  }, [rating]);
 
   return (
     <>
       <Header />
       <main>
-        <PlaceInfo isLoading={isLoading} places={places} />
+        <PlaceInfo
+          isLoading={isLoading}
+          places={filteredPlaces.length ? filteredPlaces : places}
+          type={type}
+          setType={setType}
+          rating={rating}
+          setRating={setRating}
+        />
         <HomeMap
           setBounds={setBounds}
-          places={places}
+          places={filteredPlaces.length ? filteredPlaces : places}
           coordinates={coordinates}
           setCoordinates={setCoordinates}
         />
