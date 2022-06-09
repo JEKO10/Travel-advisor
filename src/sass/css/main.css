@@ -67,7 +67,7 @@ header .search input::placeholder {
 
 .markerIcon > div {
   background-color: #fff;
-  padding: 20px;
+  padding: 20px 20px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,6 +91,10 @@ header .search input::placeholder {
 .markerIcon > div img {
   height: 80%;
   width: 100%;
+}
+
+.star-ratings {
+  margin-top: 0.5rem;
 }
 
 .placeInfo {

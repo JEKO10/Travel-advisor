@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { MapContainer, Marker, TileLayer, useMapEvent } from "react-leaflet";
 import * as L from "leaflet";
+import StarRatings from "react-star-ratings";
+import ReactDomServer from "react-dom/server";
 
 function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
   useEffect(() => {
@@ -22,6 +24,15 @@ function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
             title=${name}
             alt=${name}
           />` +
+        `${ReactDomServer.renderToString(
+          <StarRatings
+            rating={Number(rating)}
+            starRatedColor="orange"
+            numberOfStars={5}
+            starDimension="20px"
+            starSpacing="1px"
+          />
+        )}` +
         "</div>",
     });
 
