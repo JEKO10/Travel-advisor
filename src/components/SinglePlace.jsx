@@ -39,7 +39,7 @@ function SinglePlace({ place }) {
       </div>
       <div className="ranking">
         <h4>Ranking</h4>
-        <h4>{place.ranking}</h4>
+        <h5>{place.ranking}</h5>
       </div>
       {defaultPlace.awards.map((award) => (
         <div key={award.display_name} className="awards">

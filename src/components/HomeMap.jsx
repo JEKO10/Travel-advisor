@@ -1,10 +1,19 @@
-import React, { useEffect } from "react";
-import { MapContainer, Marker, TileLayer, useMapEvent } from "react-leaflet";
+import React, { useEffect, useState } from "react";
+import {
+  MapContainer,
+  Marker,
+  TileLayer,
+  useMapEvent,
+  useMap,
+} from "react-leaflet";
 import * as L from "leaflet";
 import StarRatings from "react-star-ratings";
 import ReactDomServer from "react-dom/server";
+import GestureHandling from "leaflet-gesture-handling";
 
 function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
+  const [init, setInit] = useState(true);
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
@@ -47,10 +56,18 @@ function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
     return null;
   };
 
+  const GestureHandler = () => {
+    const map = useMap();
+    map.gestureHandling.enable();
+    map.addHandler("gestureHandling", GestureHandling);
+    setInit(false);
+    return null;
+  };
+
   return (
     <section className="leaflet-container">
       {coordinates ? (
-        <MapContainer center={coordinates} zoom={14} scrollWheelZoom={true}>
+        <MapContainer center={coordinates} zoom={14}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -72,6 +89,7 @@ function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
               )}
             ></Marker>
           ))}
+          {init && <GestureHandler />}
           <SetViewOnClick />
         </MapContainer>
       ) : (
