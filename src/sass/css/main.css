@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main > section {
+  width: 50%;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,51 +29,6 @@ header {
   background-color: #394fb3;
   color: #fff;
   font-family: "Lato", sans-serif;
-}
-
-header .search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ffffff80;
-  padding: 5px 10px 5px 0;
-}
-
-header .search svg {
-  font-size: 1.5rem;
-}
-
-header .search input {
-  font-size: 1.2rem;
-  background: none;
-  border: none;
-  outline: none;
-  color: #fff;
-  padding: 0 5px;
-  margin: 0 5px;
-  font-family: "Lato", sans-serif;
-}
-
-header .search input::-webkit-input-placeholder {
-  color: #fff;
-}
-
-header .search input:-ms-input-placeholder {
-  color: #fff;
-}
-
-header .search input::-ms-input-placeholder {
-  color: #fff;
-}
-
-header .search input::placeholder {
-  color: #fff;
 }
 
 .leaflet-container {
@@ -175,7 +146,8 @@ header .search input::placeholder {
 }
 
 .singlePlace > div.address h5 {
-  padding-left: 50px;
+  width: 70%;
+  text-align: right;
 }
 
 .singlePlace > div.phone svg {
@@ -222,6 +194,115 @@ header .search input::placeholder {
   opacity: 1;
 }
 
+@media (max-width: 1200px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main > section {
+    width: 100%;
+  }
+  .singlePlace {
+    width: 50%;
+  }
+  .placeInfo .places {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    padding: 20px 20px;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header h2 {
+    font-size: 1.3rem;
+  }
+  .singlePlace {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 20px 10px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  header h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header h1 {
+    font-size: 2rem;
+    padding-bottom: 5px;
+  }
+  header h2 {
+    font-size: 1.5rem;
+    padding: 5px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h2 {
+    font-size: 1.2rem;
+  }
+  .placeInfo .filters div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 15px;
+  }
+  .singlePlace {
+    width: 100%;
+  }
+  .singlePlace .ranking h5 {
+    width: 60%;
+    text-align: right;
+  }
+  .singlePlace > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .singlePlace > div.awards h4 {
+    font-size: 0.9rem;
+    width: 80%;
+    text-align: right;
+  }
+  .singlePlace button {
+    padding: 15px 20px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -231,22 +312,6 @@ header .search input::placeholder {
 
 body {
   overflow: hidden;
-}
-
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-main > section {
-  width: 50%;
 }
 
 .loading {

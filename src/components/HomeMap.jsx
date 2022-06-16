@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   MapContainer,
   Marker,
+  Popup,
   TileLayer,
   useMapEvent,
   useMap,
@@ -72,24 +73,37 @@ function HomeMap({ setBounds, places, coordinates, setCoordinates }) {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          {places.map((place, i) => (
-            <Marker
-              key={i}
-              position={
-                place.latitude && place.longitude
-                  ? [place.latitude, place.longitude]
-                  : coordinates
-              }
-              icon={markerIcon(
-                place.name,
-                place.photo
-                  ? place.photo.images.large.url
-                  : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
-                place.rating ? place.rating : ""
-              )}
-            ></Marker>
-          ))}
-          {init && <GestureHandler />}
+          {places.map((place, i) =>
+            window.screen.width >= 576 ? (
+              <Marker
+                key={i}
+                position={
+                  place.latitude && place.longitude
+                    ? [place.latitude, place.longitude]
+                    : coordinates
+                }
+                icon={markerIcon(
+                  place.name,
+                  place.photo
+                    ? place.photo.images.large.url
+                    : "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
+                  place.rating ? place.rating : ""
+                )}
+              ></Marker>
+            ) : (
+              <Marker
+                key={i}
+                position={
+                  place.latitude && place.longitude
+                    ? [place.latitude, place.longitude]
+                    : coordinates
+                }
+              >
+                <Popup>{place.name}</Popup>
+              </Marker>
+            )
+          )}
+          {init && window.screen.width <= 1200 && <GestureHandler />}
           <SetViewOnClick />
         </MapContainer>
       ) : (

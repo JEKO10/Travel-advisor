@@ -3,6 +3,7 @@
 @import "map";
 @import "placeInfo";
 @import "singlePlace";
+@import "responsive";
 
 * {
   margin: 0;
@@ -12,14 +13,6 @@
 
 body {
   overflow: hidden;
-}
-
-main {
-  @include flex(center, flex-start);
-
-  > section {
-    width: 50%;
-  }
 }
 
 .loading {
