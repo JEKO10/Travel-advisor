@@ -13,7 +13,7 @@
 
 ## Project task
 
-Project ispired by [JavaScript Mastery](https://github.com/adrianhajdin/project_travel_advisor). Created in React, using Travel advisor API from Rapid API and React Leaflet, you can browse restaurants, hotels and attractions around you.
+Project ispired by [JavaScript Mastery](https://github.com/adrianhajdin/project_travel_advisor). Created in React, using Travel advisor API from Rapid API and React Leaflet, you can browse restaurants, hotels and attractions around you, and anywhere on the map.
 
 ## Project overview
 
