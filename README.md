@@ -13,11 +13,11 @@
 
 ## Project task
 
-Project ispired by [JavaScript Mastery](https://github.com/adrianhajdin/project_travel_advisor). Created in React, using Travel advisor API from Rapid API and React Leaflet, you can browse restaurants, hotels and attractions around you, and anywhere on the map.
+The project was inspired by [JavaScript Mastery](https://github.com/adrianhajdin/project_travel_advisor). Created in React, using Travel advisor API from Rapid API and React Leaflet, you can browse restaurants, hotels, and attractions around you, and anywhere on the map.
 
 ## Project overview
 
-This project will ask you to allow your location. If you allow it, it will show restaurants around you. You are able to choose between restaurants, hotels and attractions. Getting data based on location is done with axios and Travel advisor API parameters. You are also able to browse restaurants, hotels and attractions anywhere on the map. Maps are powered by React Leaflet. On the left, there are a select elements for type and rating. Below this 2 filtering options, there is a section with all the necessary information about restaurants, hotels and attractions. There are basic info like price rank, place ranking, their exact location, phone number, etc. Website is fully responsive.
+This project will ask you to allow your location. If you allow it, it will show restaurants around you. You are able to choose between restaurants, hotels, and attractions. Getting data based on location is done with Axios and Travel advisor API parameters. You are also able to browse restaurants, hotels, and attractions anywhere on the map. Maps are powered by React Leaflet. On the left, there are select elements for type and rating. Below these 2 filtering options, there is a section with all the necessary information about restaurants, hotels, and attractions. There is basic info like price rank, place ranking, exact location, phone number, etc. The website is fully responsive.
 
 ## Built with
 
